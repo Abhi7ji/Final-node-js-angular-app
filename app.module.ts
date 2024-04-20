@@ -21,3 +21,17 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+import { HttpClient } from '@angular/common/http';
+
+constructor(private http: HttpClient) { }
+
+import { HttpClient } from '@angular/common/http';
+
+constructor(private http: HttpClient) { }
+
+ngOnInit() {
+  this.http.get('https://httpbin.org/get').subscribe((response) => {
+    console.log('Response:', response);
+  });
+}
